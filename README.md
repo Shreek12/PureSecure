@@ -1,4 +1,4 @@
-# PureSecure – Software Assurance System (ELE8094)
+# PureSecure – Software Assurance System
 
 PureSecure is a three‑tier secure web application developed for the ELE8094 Software Assurance module. It integrates the MITRE CWE dataset with real‑time CVE data from the NIST National Vulnerability Database (NVD) to provide actionable insights into the software threat landscape. The system demonstrates secure design, secure implementation, and DevSecOps practices.
 
