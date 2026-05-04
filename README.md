@@ -100,3 +100,64 @@ All untrusted text is sanitised using:
 
 ```javascript
 div.textContent = str;
+
+
+5. DevSecOps Process
+Version Control
+GitLab repository with structured commits
+
+Feature‑branch workflow
+
+Traceability aligned with NIST SSDF PO.3
+
+Environment Separation
+config.js auto‑selects backend URL based on protocol
+
+Prevents accidental use of dev backend in production
+
+Shift‑Left Security
+Security added during development:
+
+Authentication checks
+
+Output encoding
+
+Input validation
+
+Error handling
+
+CI/CD Pipeline (.gitlab-ci.yml)
+Stage 1 – test
+
+Pytest verifies 401 responses for protected endpoints
+
+Stage 2 – security-scan
+
+GitLab SAST (Python + JS)
+
+Trivy dependency scan
+
+Pipeline blocks on HIGH/CRITICAL findings
+
+Stage 3 – deploy
+
+Render webhook (placeholder)
+
+Only runs on main
+
+Branch protection requires merge request approval
+
+6. Architecture Diagram
+Client (SPA)
+   |
+   |  JWT Auth + API Requests
+   v
+FastAPI Backend
+   |
+   |  CWE XML + NVD API
+   v
+Data Sources
+
+AI Assistance Declaration
+AI assistance was used for documentation structuring and clarity.
+All code, design decisions, and implementation work were authored by the student.
